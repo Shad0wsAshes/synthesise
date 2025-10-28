@@ -1,0 +1,9 @@
+{
+  "DMS-FREE-TEST": {
+    "email": "test@test.com",
+    "name": "Test User",
+    "created": "2025-10-28T19:17:01.266Z",
+    "expiry": "2025-11-27T19:17:01.267Z",
+    "used": false
+  }
+}
