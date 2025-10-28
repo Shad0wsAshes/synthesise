@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Mindset AI | Synthesise Mode</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="logo">Digital Mindset AI</h1>
+                <p class="tagline">Synthesise Mode - Market Research & Content Generation</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- License Activation -->
+            <section class="section" id="licenseSection">
+                <div class="card">
+                    <h2>Activate Synthesise Mode</h2>
+                    <p>Enter your license key to access the AI research system</p>
+                    <div class="input-group">
+                        <input type="text" id="licenseKey" placeholder="Enter license key (e.g., DMS-ABC123XYZ)" class="text-input">
+                        <button onclick="validateLicense()" class="btn-primary">Activate System</button>
+                    </div>
+                    <div id="licenseStatus" class="status-message"></div>
+                </div>
+            </section>
+
+            <!-- Synthesise Interface -->
+            <section class="section" id="synthesiseInterface" style="display: none;">
+                <div class="card">
+                    <div class="mode-header">
+                        <h2>Synthesise Mode Active</h2>
+                        <p>AI-powered market research and content generation</p>
+                    </div>
+
+                    <!-- Market Analysis -->
+                    <div class="step" id="analysisStep">
+                        <h3>Market Analysis</h3>
+                        <p>Click the button below to generate AI-powered niche suggestions</p>
+                        <div id="nicheResults" class="niche-container"></div>
+                        <div class="action-buttons" id="analysisButtons">
+                            <button onclick="initializeAnalysis()" class="btn-primary">Generate Niches</button>
+                            <button onclick="showCustomTopic()" class="btn-secondary">Custom Topic</button>
+                        </div>
+                        <div class="action-buttons" id="regenerateButtons" style="display: none;">
+                            <button onclick="confirmNicheSelection()" class="btn-primary" id="confirmNicheBtn" style="display: none;">Create E-book</button>
+                            <button onclick="regenerateAnalysis()" class="btn-secondary">New Analysis</button>
+                            <button onclick="showCustomTopic()" class="btn-secondary">Custom Topic</button>
+                        </div>
+                    </div>
+
+                    <!-- Custom Topic Input -->
+                    <div class="step" id="customTopicStep" style="display: none;">
+                        <h3>Enter Specific Topic</h3>
+                        <textarea id="customTopicInput" placeholder="Describe your specific topic or market..." class="text-area"></textarea>
+                        <div class="action-buttons">
+                            <button onclick="confirmCustomTopic()" class="btn-primary">Create E-book</button>
+                            <button onclick="backToAnalysis()" class="btn-secondary">Back</button>
+                        </div>
+                    </div>
+
+                    <!-- Content Generation -->
+                    <div class="step" id="contentStep" style="display: none;">
+                        <h3>Content Generation</h3>
+                        <div id="progressContainer" class="progress-container"></div>
+                        <div id="contentOutput" class="content-output"></div>
+                        <div class="action-buttons" id="contentActions" style="display: none;">
+                            <button onclick="generateNextChapter()" class="btn-primary">Generate Next Chapter</button>
+                            <button onclick="restartProcess()" class="btn-secondary">New Project</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Owned and Controlled By Digital Mindset.Hub</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
